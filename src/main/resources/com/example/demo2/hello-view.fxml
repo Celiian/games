@@ -94,13 +94,13 @@
                <children>
                   <HBox prefHeight="100.0" prefWidth="200.0">
                      <children>
-                        <Label prefHeight="109.0" prefWidth="243.0" text="MORPION" />
+                        <Label fx:id="hboxMorpion" prefHeight="109.0" prefWidth="243.0" text="MORPION" />
                      </children>
                   </HBox>
                   <Line endX="120.0" startX="-100.0" />
                   <HBox prefHeight="100.0" prefWidth="200.0">
                      <children>
-                        <Label prefHeight="109.0" prefWidth="243.0" text="RPG" />
+                        <Label fx:id="hboxRpg" prefHeight="109.0" prefWidth="243.0" text="RPG" />
                      </children>
                   </HBox>
                   <Line endX="120.0" startX="-100.0" />
@@ -126,10 +126,18 @@
             </VBox>
         <ScrollPane prefHeight="-1.0" prefWidth="-1.0">
                <content>
-                  <VBox fx:id="global" prefHeight="1090.0" prefWidth="654.0">
+                  <VBox fx:id="global" maxHeight="1100.0" maxWidth="655.0" prefHeight="1100.0" prefWidth="655.0">
                      <children>
-                        <fx:include fx:id="morpion" source="form2.fxml" />
-                        <fx:include fx:id="rpg" source="form1.fxml" />
+                        <VBox fx:id="vboxMorpion" prefHeight="200.0" prefWidth="100.0">
+                           <children>
+                              <fx:include source="form2.fxml" />
+                           </children>
+                        </VBox>
+                        <VBox fx:id="vboxRpg" prefHeight="200.0" prefWidth="100.0">
+                           <children>
+                              <fx:include source="rpg.fxml" />
+                           </children>
+                        </VBox>
                      </children>
                   </VBox>
                </content>

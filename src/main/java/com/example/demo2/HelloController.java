@@ -14,15 +14,32 @@ public class HelloController implements Initializable{
     private VBox global;
 
     @FXML
-    private VBox test;
+    private Label hboxRpg;
 
     @FXML
-    private VBox test2;
+    private Label hboxMorpion;
+
+    @FXML
+    private VBox vboxRpg;
+
+    @FXML
+    private VBox vboxMorpion;
 
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-       global.getChildren().removeAll(test);
+        global.getChildren().removeAll(vboxMorpion, vboxRpg);
+
+        hboxRpg.setOnMouseClicked(action -> {
+            global.getChildren().removeAll(vboxMorpion, vboxRpg);
+            global.getChildren().add(vboxRpg);
+        });
+
+        hboxMorpion.setOnMouseClicked(action -> {
+            global.getChildren().removeAll(vboxMorpion, vboxRpg);
+            global.getChildren().add(vboxMorpion);
+
+        });
 
     }
 }
