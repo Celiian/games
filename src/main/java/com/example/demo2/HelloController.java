@@ -4,6 +4,7 @@ package com.example.demo2;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.fxml.Initializable;
+import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 
 import java.net.URL;
@@ -17,7 +18,7 @@ public class HelloController implements Initializable{
     private Label hboxRpg;
 
     @FXML
-    private Label hboxMorpion;
+    private HBox hboxMorpion;
 
     @FXML
     private VBox vboxRpg;
